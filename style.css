@@ -1,0 +1,20 @@
+#termekkep{
+    width: 500px;
+    height: 300px;
+
+}
+#termeknev{
+    font-size: 30px;
+    font-weight: bold;
+}
+#termekkep2{
+    width: 150px;
+    height: 100px;
+}
+#termekoldal{
+    display:flex;
+    
+}
+#kiskepek{
+    display:block;
+}
