@@ -345,6 +345,12 @@ body {
     font-weight: bold;
 }
 
+.review-date {
+    float: right;
+    color: #78838c;
+    font-size: 10px;
+}
+
 .review-stars {
     font-size: 13px;
     line-height: 1.2;
