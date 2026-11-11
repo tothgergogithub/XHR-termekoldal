@@ -3,25 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XHR Termékoldal</title>
+    <title>Termékoldal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="termekoldal">
-        <div>
-            <img alt="termék" id="termekkep" src="">
-            <p id="termeknev"></p>
-        </div>
-        <div id="kiskepek">
-        <div>
-            <img src="" alt="" id="termekkep2">
-        </div>
-        <div>
+    <div class="product-page">
+        <div class="error-message" id="hiba" hidden></div>
+        <div class="top-section">
+            <div class="gallery">
+                <div class="main-image-box">
+                    <img id="termekkep" src="" alt="Termékkép">
+                </div>
+                <div class="small-images">
+                    <div class="small-image-box"><img id="kistermekkep1" src="" alt="Kiskép 1"></div>
+                    <div class="small-image-box"><img id="kistermekkep2" src="" alt="Kiskép 2"></div>
+                    <div class="small-image-box"><img id="kistermekkep3" src="" alt="Kiskép 3"></div>
+                    <div class="small-image-box"><img id="kistermekkep4" src="" alt="Kiskép 4"></div>
+                </div>
+            </div>
 
+            <div class="product-info">
+                <div class="new-label">ÚJ</div>
+                <div class="product-name" id="termeknev"></div>
+                <div class="short-description" id="rovid-leiras"></div>
+                <div class="rating">
+                    <div class="stars">★★★★★</div>
+                    <div id="ertekeles"></div>
+                    <div id="velemenyek-szama"></div>
+                </div>
+                <div class="price" id="ar"></div>
+                <div class="stock" id="keszlet"></div>
+                <div class="buttons">
+                    <div class="cart-button">🛒 &nbsp; Kosárba</div>
+                    <div class="favorite-button">♡ &nbsp; Kedvencekhez</div>
+                </div>
+            </div>
+
+            <div class="manufacturer-box">
+                <div class="manufacturer-row">
+                    <div class="manufacturer-icon">M</div>
+                    <div>
+                        <div class="small-label">Gyártó</div>
+                        <div class="manufacturer-name" id="gyarto"></div>
+                    </div>
+                </div>
+                <div class="manufacturer-row">
+                    <div class="info-icon">◎</div>
+                    <div>
+                        <div class="small-label">Származási ország</div>
+                        <div class="manufacturer-country" id="orszag"></div>
+                    </div>
+                </div>
+                <div class="manufacturer-row">
+                    <div class="info-icon">✓</div>
+                    <div>
+                        <div class="small-label">Készlet</div>
+                        <div class="manufacturer-country" id="gyarto-keszlet"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="tabs">
+            <div class="tab active-tab">Leírás</div>
+            <div class="tab">Tulajdonságok</div>
+            <div class="tab">Vélemények (<span id="tab-velemeny-szama"></span>)</div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="description-column">
+                <div class="column-title">A termékről</div>
+                <div class="description-text" id="leiras"></div>
+                <div class="feature-boxes">
+                    <div class="feature-box">
+                        <div class="feature-icon">ϟ</div>
+                        <div id="jellemzo1"></div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">◈</div>
+                        <div id="jellemzo2"></div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">▣</div>
+                        <div id="jellemzo3"></div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">⚙</div>
+                        <div id="jellemzo4"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-column">
+                <div class="column-title">Fő jellemzők</div>
+                <div class="feature-list-item"><div class="list-icon">▦</div><div id="lista-jellemzo1"></div></div>
+                <div class="feature-list-item"><div class="list-icon">▤</div><div id="lista-jellemzo2"></div></div>
+                <div class="feature-list-item"><div class="list-icon">▣</div><div id="lista-jellemzo3"></div></div>
+                <div class="feature-list-item"><div class="list-icon">▧</div><div id="lista-jellemzo4"></div></div>
+            </div>
+
+            <div class="reviews-column">
+                <div class="column-title">Vásárlói vélemények</div>
+                <div class="review-box">
+                    <div class="review-avatar" id="velemeny-kezdobetuje1"></div>
+                    <div class="review-content">
+                        <div class="review-name" id="velemeny-nev1"></div>
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-text" id="velemeny-szoveg1"></div>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <div class="review-avatar" id="velemeny-kezdobetuje2"></div>
+                    <div class="review-content">
+                        <div class="review-name" id="velemeny-nev2"></div>
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-text" id="velemeny-szoveg2"></div>
+                    </div>
+                </div>
+                <div class="all-reviews">Összes vélemény megtekintése →</div>
+            </div>
         </div>
     </div>
-    
+
     <script src="app.js"></script>
 </body>
 </html>
